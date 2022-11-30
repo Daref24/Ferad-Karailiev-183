@@ -1,0 +1,15 @@
+n = int(input("Въведете число n: "))
+dct = {input("Ключ: "):input("Стойност: ") for k in range(n)}
+print(dct)
+m = int(input("Брой стойности на списъка:"))
+lst = [input("Въведете стойност:") for k in range(m)]
+print("Списък: ",lst)
+changed = []
+for i in lst:
+    f = i
+    if i in dct:
+        f = dct.get(i)
+        dct.pop(i)
+    changed.append(f)
+print("Променен списък: ", changed)
+print("Речник след обработката: ", dct)
